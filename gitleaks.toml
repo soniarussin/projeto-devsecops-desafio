@@ -1,4 +1,4 @@
-title = "Gitleaks v2 - Desafio DevSecOps"
+title = "Gitleaks - Desafio DevSecOps"
 
 [extend]
 useDefault = true
