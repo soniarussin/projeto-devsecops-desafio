@@ -1,5 +1,6 @@
-const API_KEY = "VALOR_API";
-const DB_PASSWORD = "SENHA_BANCO_DE_DADOS";
+// Credenciais devem ser carregadas de variáveis de ambiente, nunca hardcoded!
+// const API_KEY = process.env.API_KEY;
+// const DB_PASSWORD = process.env.DB_PASSWORD;
 
 fetch('db.json')
     .then(response => response.json())
@@ -9,7 +10,7 @@ fetch('db.json')
         const list = document.getElementById('task-list');
         data.itens.forEach(item => {
             let li = document.createElement('li');
-            // CORREÇÃO 3: innerText em vez de innerHTML (evita XSS)
+            // CORREÇÃO 1: innerText em vez de innerHTML (evita XSS)
             li.innerText = item.task;
             list.appendChild(li);
         });
